@@ -2,6 +2,8 @@ Photogur::Application.routes.draw do
 
   #This is ROUTES. It is in CONFIG and is always the first thing we touch
 
+  root :to => "pictures#index"
+
   get 'pictures' => 'pictures#index'
 
   # To create new pictures
