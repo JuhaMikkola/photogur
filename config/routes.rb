@@ -2,15 +2,22 @@ Photogur::Application.routes.draw do
 
   #This is ROUTES. It is in CONFIG and is always the first thing we touch
 
+  #To refractor for CRUD pattern
+  resources :pictures
   root :to => "pictures#index"
 
-  get 'pictures' => 'pictures#index'
-
   # To create new pictures
-  post 'pictures' => "pictures#create"
-  get 'pictures/new' => 'pictures#new'
+  # post 'pictures' => "pictures#create"
+  
+  # get 'pictures' => 'pictures#index'
+  # get 'pictures/new' => 'pictures#new'
 
-  get 'pictures/:id' => 'pictures#show', as: "picture"
+  # get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
+  # put 'pictures/:id' => "pictures#update"
+
+  # get 'pictures/:id' => 'pictures#show', as: "picture"
+
+  # root :to => "pictures#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
